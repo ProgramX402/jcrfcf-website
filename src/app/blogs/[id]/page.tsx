@@ -2,7 +2,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Metadata } from 'next'; // Import Metadata type for potential future use
 
 interface Blog {
   _id: string;
@@ -11,28 +10,24 @@ interface Blog {
   mediaUrl?: string;
 }
 
-// REMOVED custom 'Props' interface to use inline typing, which is more robust
-// against Next.js internal PageProps constraints and caching issues.
+// ✅ Define your own props type (no import from "next")
+interface BlogPageProps {
+  params: {
+    id: string;
+  };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
 
 async function fetchBlog(id: string): Promise<Blog> {
-  // We use a basic fetch here. In a real app, you might want to handle errors more gracefully.
   const res = await fetch(`https://orphanage-backend-r7i2.onrender.com/api/blogs/${id}`, {
-    // Ensuring cache control for dynamic data
     next: { revalidate: 60 },
   });
 
-  if (!res.ok) {
-    // Throw error to be caught by the calling function or Next.js boundary
-    throw new Error('Failed to fetch blog');
-  }
+  if (!res.ok) throw new Error('Failed to fetch blog');
   return res.json();
 }
 
-// FIX: Using inline type definition ({ params, searchParams }) directly in the function signature
-export default async function BlogPage({ params, searchParams }: { 
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined }; 
-}) {
+export default async function BlogPage({ params }: BlogPageProps) {
   let blog: Blog | null = null;
 
   try {
@@ -56,7 +51,7 @@ export default async function BlogPage({ params, searchParams }: {
     <>
       <Navbar />
 
-      {/* HERO SECTION - Responsive height based on viewport */}
+      {/* HERO SECTION */}
       <section className="relative w-full h-[50vh]">
         <Image
           src={blog.mediaUrl || '/assets/images/blog-hero.jpg'}
@@ -82,7 +77,6 @@ export default async function BlogPage({ params, searchParams }: {
             />
           </div>
 
-          {/* Render blog content with Tailwind 'prose' styling for readability */}
           <div
             className="prose max-w-none text-gray-800 leading-relaxed"
             dangerouslySetInnerHTML={{ __html: blog.content }}
