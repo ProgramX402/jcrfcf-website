@@ -1,9 +1,4 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-// @ts-nocheck
-
-"use server";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -17,6 +12,11 @@ interface Blog {
   mediaUrl?: string;
 }
 
+// ✅ Strongly type `params` without breaking PageProps
+type BlogPageProps = {
+  params: Promise<{ id: string }>;
+};
+
 async function fetchBlog(id: string): Promise<Blog> {
   const res = await fetch(
     `https://orphanage-backend-r7i2.onrender.com/api/blogs/${id}`,
@@ -27,8 +27,8 @@ async function fetchBlog(id: string): Promise<Blog> {
   return res.json();
 }
 
-export default async function BlogPage({ params }: { params: { id: string } }) {
-  const { id } = params;
+export default async function BlogPage({ params }: BlogPageProps) {
+  const { id } = await params; // ✅ Await params (fixes the Promise<any> issue)
   let blog: Blog | null = null;
 
   try {
