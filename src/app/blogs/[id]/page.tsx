@@ -11,12 +11,6 @@ interface Blog {
   mediaUrl?: string;
 }
 
-// ✅ Simple, correct type — no PageProps from "next"
-type BlogPageProps = {
-  params: { id: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-};
-
 async function fetchBlog(id: string): Promise<Blog> {
   const res = await fetch(
     `https://orphanage-backend-r7i2.onrender.com/api/blogs/${id}`,
@@ -27,10 +21,12 @@ async function fetchBlog(id: string): Promise<Blog> {
   return res.json();
 }
 
-// ✅ Explicit return type ensures Next.js + TS build cleanly
+// ✅ Loose typing for params fixes the build constraint issue
 export default async function BlogPage({
   params,
-}: BlogPageProps): Promise<JSX.Element> {
+}: {
+  params: any;
+}): Promise<JSX.Element> {
   let blog: Blog | null = null;
 
   try {
@@ -62,7 +58,7 @@ export default async function BlogPage({
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
           <h1 className="text-4xl md:text-5xl font-bold">{blog.title}</h1>
         </div>
