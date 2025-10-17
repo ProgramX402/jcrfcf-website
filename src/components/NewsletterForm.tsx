@@ -30,9 +30,20 @@ export default function NewsletterForm() {
       setStatus("success");
       setMessage("🎉 Subscribed successfully!");
       setEmail("");
-    } catch (err: any) {
+    } catch (err: unknown) { // Changed 'any' to 'unknown'
       setStatus("error");
-      setMessage(err.message || "Subscription failed");
+      
+      let errorMessage = "Subscription failed";
+      
+      // Use a type guard to safely check and extract the message
+      if (err instanceof Error) {
+        errorMessage = err.message;
+      } else if (typeof err === "object" && err !== null && "message" in err) {
+        // Fallback for non-Error objects that might have a message property
+        errorMessage = (err as { message: string }).message;
+      }
+      
+      setMessage(errorMessage);
     } finally {
       setTimeout(() => setStatus("idle"), 5000);
     }
