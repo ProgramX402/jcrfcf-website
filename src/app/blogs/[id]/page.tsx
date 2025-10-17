@@ -1,4 +1,3 @@
-// app/blogs/[id]/page.tsx
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
@@ -11,8 +10,10 @@ interface Blog {
   mediaUrl?: string;
 }
 
+// FIX: Added searchParams to satisfy the Next.js PageProps constraint
 interface Props {
   params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined }; 
 }
 
 async function fetchBlog(id: string): Promise<Blog> {
