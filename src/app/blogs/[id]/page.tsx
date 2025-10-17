@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -11,6 +12,11 @@ interface Blog {
   mediaUrl?: string;
 }
 
+// Type-safe params interface
+interface BlogPageProps {
+  params: { id: string };
+}
+
 async function fetchBlog(id: string): Promise<Blog> {
   const res = await fetch(
     `https://orphanage-backend-r7i2.onrender.com/api/blogs/${id}`,
@@ -21,16 +27,12 @@ async function fetchBlog(id: string): Promise<Blog> {
   return res.json();
 }
 
-// ✅ Loose typing for params fixes the build constraint issue
-export default async function BlogPage({
-  params,
-}: {
-  params: { id: string };
-}): Promise<JSX.Element> {
+export default async function BlogPage({ params }: BlogPageProps) {
+  const { id } = params;
   let blog: Blog | null = null;
 
   try {
-    blog = await fetchBlog(params.id);
+    blog = await fetchBlog(id);
   } catch (error) {
     console.error("Error fetching blog:", error);
   }
