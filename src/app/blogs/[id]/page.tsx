@@ -25,7 +25,7 @@ async function fetchBlog(id: string): Promise<Blog> {
 export default async function BlogPage({
   params,
 }: {
-  params: any;
+  params: { id: string };
 }): Promise<JSX.Element> {
   let blog: Blog | null = null;
 
