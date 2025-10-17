@@ -1,7 +1,8 @@
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Link from 'next/link';
-import Image from 'next/image';
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Link from "next/link";
+import Image from "next/image";
+import React from "react";
 
 interface Blog {
   _id: string;
@@ -10,24 +11,26 @@ interface Blog {
   mediaUrl?: string;
 }
 
-// ✅ Define your own props type (no import from "next")
-interface BlogPageProps {
-  params: {
-    id: string;
-  };
+// ✅ Simple, correct type — no PageProps from "next"
+type BlogPageProps = {
+  params: { id: string };
   searchParams?: { [key: string]: string | string[] | undefined };
-}
+};
 
 async function fetchBlog(id: string): Promise<Blog> {
-  const res = await fetch(`https://orphanage-backend-r7i2.onrender.com/api/blogs/${id}`, {
-    next: { revalidate: 60 },
-  });
+  const res = await fetch(
+    `https://orphanage-backend-r7i2.onrender.com/api/blogs/${id}`,
+    { next: { revalidate: 60 } }
+  );
 
-  if (!res.ok) throw new Error('Failed to fetch blog');
+  if (!res.ok) throw new Error("Failed to fetch blog");
   return res.json();
 }
 
-export default async function BlogPage({ params }: BlogPageProps) {
+// ✅ Explicit return type ensures Next.js + TS build cleanly
+export default async function BlogPage({
+  params,
+}: BlogPageProps): Promise<JSX.Element> {
   let blog: Blog | null = null;
 
   try {
@@ -39,7 +42,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
   if (!blog) {
     return (
       <div className="py-20 text-center text-red-500">
-        Error loading blog.{' '}
+        Error loading blog.{" "}
         <Link href="/blogs" className="text-blue-600 underline">
           Back to Blogs
         </Link>
@@ -54,7 +57,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
       {/* HERO SECTION */}
       <section className="relative w-full h-[50vh]">
         <Image
-          src={blog.mediaUrl || '/assets/images/blog-hero.jpg'}
+          src={blog.mediaUrl || "/assets/images/blog-hero.jpg"}
           alt={blog.title}
           fill
           className="object-cover"
@@ -70,7 +73,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
         <div className="container mx-auto px-6 md:px-20 lg:px-40">
           <div className="relative w-full h-96 mb-8 rounded-lg shadow-lg">
             <Image
-              src={blog.mediaUrl || '/assets/images/default-blog.jpg'}
+              src={blog.mediaUrl || "/assets/images/default-blog.jpg"}
               alt={blog.title}
               fill
               className="object-cover rounded-lg"
