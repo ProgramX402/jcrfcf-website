@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -11,7 +12,17 @@ interface Blog {
   mediaUrl?: string;
 }
 
-// ✅ Simpler props typing — avoids the PageProps constraint issue
+async function fetchBlog(id: string): Promise<Blog> {
+  const res = await fetch(
+    `https://orphanage-backend-r7i2.onrender.com/api/blogs/${id}`,
+    { next: { revalidate: 60 } }
+  );
+
+  if (!res.ok) throw new Error("Failed to fetch blog");
+  return res.json();
+}
+
+// ✅ FIXED VERSION
 export default async function BlogPage({
   params,
 }: {
@@ -19,16 +30,6 @@ export default async function BlogPage({
 }) {
   const { id } = params;
   let blog: Blog | null = null;
-
-  async function fetchBlog(id: string): Promise<Blog> {
-    const res = await fetch(
-      `https://orphanage-backend-r7i2.onrender.com/api/blogs/${id}`,
-      { next: { revalidate: 60 } }
-    );
-
-    if (!res.ok) throw new Error("Failed to fetch blog");
-    return res.json();
-  }
 
   try {
     blog = await fetchBlog(id);
