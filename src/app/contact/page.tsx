@@ -161,11 +161,11 @@ export default function ContactPage() {
 
             <p className="mb-2">
               <i className="fas fa-map-marker-alt text-green-700 mr-2"></i>
-              123 Orphanage Street, City, Country
+             Abbatoir, Jos, Plateau State
             </p>
             <p className="mb-2">
               <i className="fas fa-phone-alt text-green-700 mr-2"></i>
-              +234 800 123 4567
+              +234 818 252 6413
             </p>
             <p className="mb-2">
               <i className="fas fa-envelope text-green-700 mr-2"></i>

@@ -10,7 +10,7 @@ const DonatePage = () => {
 
       {/* Hero Section */}
       <section className="bg-green-700 text-white py-20 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">
           Support Our Mission
         </h1>
         <p className="text-lg max-w-2xl mx-auto">

@@ -31,13 +31,13 @@ export default function Footer() {
           <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
           <ul className="space-y-3">
             <li className="flex items-center gap-2">
-              <FaPhoneAlt /> +234 800 123 4567
+              <FaPhoneAlt /> +234 818 252 6413
             </li>
             <li className="flex items-center gap-2">
               <FaEnvelope /> info@orphanage.org
             </li>
             <li className="flex items-center gap-2">
-              <FaMapMarkerAlt /> 123 Hope Street, Lagos, Nigeria
+              <FaMapMarkerAlt /> Abbattoir, Jos, Nigeria
             </li>
           </ul>
 
