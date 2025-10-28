@@ -1,7 +1,10 @@
 "use client";
 
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+// Lucide-React for general icons
+import { Phone, Mail, MapPin } from "lucide-react";
+
+// Simple Icons (from react-icons/si) for social media
+import { SiFacebook, SiX, SiInstagram, SiLinkedin, SiYoutube } from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -31,23 +34,23 @@ export default function Footer() {
           <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
           <ul className="space-y-3">
             <li className="flex items-center gap-2">
-              <FaPhoneAlt /> +234 818 252 6413
+              <Phone className="w-5 h-5" /> +234 818 252 6413
             </li>
             <li className="flex items-center gap-2">
-              <FaEnvelope /> info@orphanage.org
+              <Mail className="w-5 h-5" /> info@orphanage.org
             </li>
             <li className="flex items-center gap-2">
-              <FaMapMarkerAlt /> Abbattoir, Jos, Nigeria
+              <MapPin className="w-5 h-5" /> Abbattoir, Jos, Nigeria
             </li>
           </ul>
 
           {/* Social Media */}
           <div className="flex space-x-4 mt-6">
-            <a href="#" className="hover:text-gray-300"><FaFacebookF className="text-xl" /></a>
-            <a href="#" className="hover:text-gray-300"><FaTwitter className="text-xl" /></a>
-            <a href="#" className="hover:text-gray-300"><FaInstagram className="text-xl" /></a>
-            <a href="#" className="hover:text-gray-300"><FaLinkedinIn className="text-xl" /></a>
-            <a href="#" className="hover:text-gray-300"><FaYoutube className="text-xl" /></a>
+            <a href="https://www.facebook.com/profile.php?id=61555961339997" className="hover:text-gray-300"><SiFacebook className="text-xl" /></a>
+            <a href="#" className="hover:text-gray-300"><SiX className="text-xl" /></a>
+            <a href="https://www.instagram.com/jos_christian_refuge/" className="hover:text-gray-300"><SiInstagram className="text-xl" /></a>
+            <a href="#" className="hover:text-gray-300"><SiLinkedin className="text-xl" /></a>
+            <a href="#" className="hover:text-gray-300"><SiYoutube className="text-xl" /></a>
           </div>
         </div>
       </div>

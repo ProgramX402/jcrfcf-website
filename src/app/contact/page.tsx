@@ -2,8 +2,18 @@
 "use client";
 
 import { useState } from "react";
+// Assuming these are local components
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+// 1. Import the necessary icons from lucide-react (for contact details)
+import { Phone, Mail, MapPin } from "lucide-react";
+
+// 2. Import icons from react-icons/fa or react-icons/si for social media.
+// I'll use 'react-icons/fa' here as it aligns with the 'fab' classes used in the original JSX,
+// but feel free to switch to 'react-icons/si' (as in the previous response) if preferred.
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -159,43 +169,45 @@ export default function ContactPage() {
               Feel free to reach us through any of the channels below:
             </p>
 
-            <p className="mb-2">
-              <i className="fas fa-map-marker-alt text-green-700 mr-2"></i>
-             Abbatoir, Jos, Plateau State
+            {/* Replaced <i> tags with Lucide components */}
+            <p className="mb-2 flex items-center">
+              <MapPin className="text-green-700 w-5 h-5 mr-2" />
+              Abbattoir, Jos, Plateau State
             </p>
-            <p className="mb-2">
-              <i className="fas fa-phone-alt text-green-700 mr-2"></i>
+            <p className="mb-2 flex items-center">
+              <Phone className="text-green-700 w-5 h-5 mr-2" />
               +234 818 252 6413
             </p>
-            <p className="mb-2">
-              <i className="fas fa-envelope text-green-700 mr-2"></i>
+            <p className="mb-2 flex items-center">
+              <Mail className="text-green-700 w-5 h-5 mr-2" />
               info@orphanage.org
             </p>
 
+            {/* Replaced <i> tags with react-icons/fa components */}
             <div className="flex space-x-4 mt-6">
               <a
                 href="#"
                 className="text-green-700 text-2xl hover:text-green-900"
               >
-                <i className="fab fa-facebook"></i>
+                <FaFacebook />
               </a>
               <a
                 href="#"
                 className="text-green-700 text-2xl hover:text-green-900"
               >
-                <i className="fab fa-twitter"></i>
+                <FaTwitter />
               </a>
               <a
                 href="#"
                 className="text-green-700 text-2xl hover:text-green-900"
               >
-                <i className="fab fa-instagram"></i>
+                <FaInstagram />
               </a>
               <a
                 href="#"
                 className="text-green-700 text-2xl hover:text-green-900"
               >
-                <i className="fab fa-youtube"></i>
+                <FaYoutube />
               </a>
             </div>
           </div>
@@ -204,9 +216,12 @@ export default function ContactPage() {
 
       {/* GOOGLE MAP */}
       <section className="w-full h-96">
+        {/* NOTE: You should replace 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509575!2d144.95373531531676!3d-37.8162794420211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1fdf2cf%3A0xf2c0e7d5d7f3b7d!2sOrphanage!5e0!3m2!1sen!2sng!4v1632929189546!5m2!1sen!2sng' 
+        with a valid Google Maps embed URL using your actual location and API key 
+        for the map to display correctly in production. */}
         <iframe
           className="w-full h-full"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509575!2d144.95373531531676!3d-37.8162794420211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1fdf2cf%3A0xf2c0e7d5d7f3b7d!2sOrphanage!5e0!3m2!1sen!2sng!4v1632929189546!5m2!1sen!2sng"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509575!2d144.95373531531676!3d-37.8162794420211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1fdf2cf%3A0xf2c0e7d5d7f3b7d!2sOrphanage!5e0!3m2!1sen!2sng!4v1632929189546!5m2!1sen!2sng" 
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
