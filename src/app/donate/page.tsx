@@ -69,10 +69,11 @@ const DonatePage = () => {
             123 Orphanage Street, City, Country
           </p>
 
-          {/* Google Map Embed */}
-          <div className="rounded-lg overflow-hidden shadow-lg">
+         {/* Google Map Embed */}
+<div className="rounded-lg overflow-hidden shadow-lg">
   <iframe
-    src="https://maps.google.com/?cid=16183223376337093422&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
+    // Updated to use the map link for the coordinates you provided (9.88224352, 8.88659012)
+    src="https://maps.google.com/maps?q=9.88224352046847,8.886590125152992&z=15&output=embed"
     width="100%"
     height="400"
     style={{ border: 0 }}

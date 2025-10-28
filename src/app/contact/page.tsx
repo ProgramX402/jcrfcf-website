@@ -214,12 +214,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-     {/* GOOGLE MAP */}
+    {/* GOOGLE MAP */}
 <section className="w-full h-96">
-  {/* NOTE: The map now displays the location you requested. */}
+  {/* The src has been updated to use the map centered at your coordinates. */}
   <iframe
     className="w-full h-full"
-    src="https://maps.google.com/?cid=16183223376337093422&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" 
+    src="https://maps.google.com/maps?q=9.88224352046847,8.886590125152992&z=15&output=embed" 
     style={{ border: 0 }}
     allowFullScreen
     loading="lazy"

@@ -142,16 +142,17 @@ const Page = () => {
     </p>
     <div className="grid md:grid-cols-2 gap-10 items-center">
       <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg">
-        <iframe
-          // Map centered on the general Abbatoir/Phototech area in Jos, Plateau
-          src="https://maps.google.com/?cid=16183223376337093422&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          loading="lazy"
-          allowFullScreen
-        ></iframe>
-      </div>
+  <iframe
+    // Use the actual coordinates to generate the embed link
+    src="https://maps.google.com/maps?q=9.88224352046847,8.886590125152992&z=15&output=embed"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    loading="lazy"
+    allowFullScreen
+    title="Orphanage Location"
+  ></iframe>
+</div>
       <div>
         <h3 className="text-2xl font-semibold mb-4">Visit Us At</h3>
         <p className="mb-4">Fototek Abbatoir, Plateau State, Nigeria</p>
