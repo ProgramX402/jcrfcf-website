@@ -34,10 +34,10 @@ export default function Footer() {
           <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
           <ul className="space-y-3">
             <li className="flex items-center gap-2">
-              <Phone className="w-5 h-5" /> +234 818 252 6413
+              <Phone className="w-5 h-5" /> +234 7076 2984 91
             </li>
             <li className="flex items-center gap-2">
-              <Mail className="w-5 h-5" /> info@orphanage.org
+              <Mail className="w-5 h-5" /> Joschristianrefuge24@gmail.com
             </li>
             <li className="flex items-center gap-2">
               <MapPin className="w-5 h-5" /> Abbattoir, Jos, Nigeria
@@ -46,11 +46,11 @@ export default function Footer() {
 
           {/* Social Media */}
           <div className="flex space-x-4 mt-6">
-            <a href="https://www.facebook.com/profile.php?id=61555961339997" className="hover:text-gray-300"><SiFacebook className="text-xl" /></a>
-            <a href="#" className="hover:text-gray-300"><SiX className="text-xl" /></a>
-            <a href="https://www.instagram.com/jos_christian_refuge/" className="hover:text-gray-300"><SiInstagram className="text-xl" /></a>
-            <a href="#" className="hover:text-gray-300"><SiLinkedin className="text-xl" /></a>
-            <a href="#" className="hover:text-gray-300"><SiYoutube className="text-xl" /></a>
+            <a href="https://www.facebook.com/profile.php?id=61555961339997" className="hover:text-gray-300" target="_blank"><SiFacebook className="text-xl" /></a>
+            <a href="#" className="hover:text-gray-300"><SiX className="text-xl" target="_blank" /></a>
+            <a href="https://www.instagram.com/jos_christian_refuge/" className="hover:text-gray-300" target="_blank"><SiInstagram className="text-xl" /></a>
+            <a href="#" className="hover:text-gray-300"><SiLinkedin className="text-xl" target="_blank" /></a>
+            <a href="#" className="hover:text-gray-300"><SiYoutube className="text-xl" target="_blank" /></a>
           </div>
         </div>
       </div>

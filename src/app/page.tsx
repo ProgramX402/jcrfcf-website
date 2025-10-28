@@ -19,7 +19,7 @@ import DirectorMessage from "@/components/DirectorMessage";
 
 const Page = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Navbar />
 
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -181,7 +181,7 @@ const Page = () => {
       </section>
 
       <Footer />
-    </>
+    </div>
   );
 };
 

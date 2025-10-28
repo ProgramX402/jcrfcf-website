@@ -26,7 +26,7 @@ export default function ChatWidget() {
               transition={{ delay: 0.1 }}
             >
               <Link
-                href="https://wa.me/2348069271286"
+                href="https://wa.me/2347076298491"
                 target="_blank"
                 className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-full shadow-md hover:bg-green-700 transition"
               >
@@ -42,7 +42,7 @@ export default function ChatWidget() {
               transition={{ delay: 0.2 }}
             >
               <Link
-                href="mailto:info@yourorphanage.org"
+                href="mailto:joschristianrefuge24@gmail.com"
                 className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-700 transition"
               >
                 <Mail size={20} />
@@ -57,7 +57,7 @@ export default function ChatWidget() {
               transition={{ delay: 0.3 }}
             >
               <Link
-                href="tel:+2348012345678"
+                href="tel:+2347076298491"
                 className="flex items-center gap-2 bg-gray-700 text-white px-4 py-2 rounded-full shadow-md hover:bg-gray-800 transition"
               >
                 <Phone size={20} />

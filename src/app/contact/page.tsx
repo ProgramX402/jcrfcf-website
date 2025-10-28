@@ -176,11 +176,11 @@ export default function ContactPage() {
             </p>
             <p className="mb-2 flex items-center">
               <Phone className="text-green-700 w-5 h-5 mr-2" />
-              +234 818 252 6413
+              +234 7076 2984 91
             </p>
             <p className="mb-2 flex items-center">
               <Mail className="text-green-700 w-5 h-5 mr-2" />
-              info@orphanage.org
+              Joschristianrefuge24@gmail.com
             </p>
 
             {/* Replaced <i> tags with react-icons/fa components */}
