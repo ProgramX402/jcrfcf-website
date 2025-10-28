@@ -219,7 +219,7 @@ export default function ContactPage() {
   {/* The src has been updated to use the map centered at your coordinates. */}
   <iframe
     className="w-full h-full"
-    src="https://maps.google.com/maps?q=9.88224352046847,8.886590125152992&z=15&output=embed" 
+    src="https://maps.app.goo.gl/ivcBoSdmpjwditJY6" 
     style={{ border: 0 }}
     allowFullScreen
     loading="lazy"

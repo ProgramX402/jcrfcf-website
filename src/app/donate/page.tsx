@@ -73,7 +73,7 @@ const DonatePage = () => {
 <div className="rounded-lg overflow-hidden shadow-lg">
   <iframe
     // Updated to use the map link for the coordinates you provided (9.88224352, 8.88659012)
-    src="https://maps.google.com/maps?q=9.88224352046847,8.886590125152992&z=15&output=embed"
+    src="https://maps.app.goo.gl/ivcBoSdmpjwditJY6"
     width="100%"
     height="400"
     style={{ border: 0 }}

@@ -144,7 +144,7 @@ const Page = () => {
       <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg">
   <iframe
     // Use the actual coordinates to generate the embed link
-    src="https://maps.google.com/maps?q=9.88224352046847,8.886590125152992&z=15&output=embed"
+    src="https://maps.app.goo.gl/ivcBoSdmpjwditJY6"
     width="100%"
     height="100%"
     style={{ border: 0 }}
