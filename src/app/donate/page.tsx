@@ -71,17 +71,17 @@ const DonatePage = () => {
 
           {/* Google Map Embed */}
           <div className="rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0860708825954!2d-122.41941558468159!3d37.77492977975988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c0f0e5f3d%3A0xabcdef123456789!2sOrphanage!5e0!3m2!1sen!2s!4v1700000000000"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Orphanage Location"
-            ></iframe>
-          </div>
+  <iframe
+    src="https://maps.google.com/?cid=16183223376337093422&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
+    width="100%"
+    height="400"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    title="Orphanage Location"
+  ></iframe>
+</div>
         </div>
       </section>
 

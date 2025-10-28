@@ -180,7 +180,7 @@ export default function ContactPage() {
             </p>
             <p className="mb-2 flex items-center">
               <Mail className="text-green-700 w-5 h-5 mr-2" />
-              Joschristianrefuge24@gmail.com
+              joschristianrefuge24@gmail.com
             </p>
 
             {/* Replaced <i> tags with react-icons/fa components */}
@@ -214,19 +214,17 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* GOOGLE MAP */}
-      <section className="w-full h-96">
-        {/* NOTE: You should replace 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509575!2d144.95373531531676!3d-37.8162794420211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1fdf2cf%3A0xf2c0e7d5d7f3b7d!2sOrphanage!5e0!3m2!1sen!2sng!4v1632929189546!5m2!1sen!2sng' 
-        with a valid Google Maps embed URL using your actual location and API key 
-        for the map to display correctly in production. */}
-        <iframe
-          className="w-full h-full"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509575!2d144.95373531531676!3d-37.8162794420211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1fdf2cf%3A0xf2c0e7d5d7f3b7d!2sOrphanage!5e0!3m2!1sen!2sng!4v1632929189546!5m2!1sen!2sng" 
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-        ></iframe>
-      </section>
+     {/* GOOGLE MAP */}
+<section className="w-full h-96">
+  {/* NOTE: The map now displays the location you requested. */}
+  <iframe
+    className="w-full h-full"
+    src="https://maps.google.com/?cid=16183223376337093422&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" 
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+  ></iframe>
+</section>
 
       <Footer />
     </>

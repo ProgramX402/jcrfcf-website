@@ -37,7 +37,7 @@ export default function Footer() {
               <Phone className="w-5 h-5" /> +234 7076 2984 91
             </li>
             <li className="flex items-center gap-2">
-              <Mail className="w-5 h-5" /> Joschristianrefuge24@gmail.com
+              <Mail className="w-5 h-5" /> joschristianrefuge24@gmail.com
             </li>
             <li className="flex items-center gap-2">
               <MapPin className="w-5 h-5" /> Abbattoir, Jos, Nigeria

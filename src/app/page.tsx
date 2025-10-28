@@ -5,6 +5,7 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
+import { Phone, Mail, Clock } from "lucide-react";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -91,9 +92,10 @@ const Page = () => {
           transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Our orphanage is dedicated to providing love, care, and support for
-          children who have lost their families. We create a safe environment
-          where they can grow, learn, and thrive with dignity and hope.
+          We are a faith-based, non-profit and non- governmental organization(Orphanage home) dedicated 
+          to caring for children and teenagers who have lost their parents due to insurgency and other 
+          conflicts. We also provide support for vulnerable children, ensuring their holistic development- 
+          spiritually, emotionally, educationally,and socially.
         </motion.p>
 
         <motion.a
@@ -128,39 +130,45 @@ const Page = () => {
 <HowYouCanSupport />
 
 
-      {/* PAY US A VISIT */}
-      <section className="py-16 bg-green-700 text-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-            Pay Us a Visit
-          </h2>
-          <p className="text-center mb-12 max-w-2xl mx-auto">
-            You are always welcome to visit our orphanage, meet the children,
-            and see firsthand how your support is making a difference.
-          </p>
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.502094280239!2d106.70042361533484!3d10.776530992322308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4571e47b1b%3A0xe93e6d7c92f6e26d!2sNotre%20Dame%20Cathedral%20of%20Saigon!5e0!3m2!1sen!2s!4v1632133425365!5m2!1sen!2s"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                loading="lazy"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Visit Us At</h3>
-              <p className="mb-4">123 Orphanage Street, Green City, Country</p>
-              <h3 className="text-2xl font-semibold mb-4">Contact Info</h3>
-              <p className="mb-2">📞 +123 456 789</p>
-              <p className="mb-2">📧 contact@orphanage.org</p>
-              <p className="mb-2">🕒 Mon - Sat: 9:00 AM - 6:00 PM</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+     {/* PAY US A VISIT */}
+<section className="py-16 bg-green-700 text-white">
+  <div className="container mx-auto px-6">
+    <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+      Pay Us a Visit
+    </h2>
+    <p className="text-center mb-12 max-w-2xl mx-auto">
+      You are always welcome to visit our orphanage, meet the children,
+      and see firsthand how your support is making a difference.
+    </p>
+    <div className="grid md:grid-cols-2 gap-10 items-center">
+      <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg">
+        <iframe
+          // Map centered on the general Abbatoir/Phototech area in Jos, Plateau
+          src="https://maps.google.com/?cid=16183223376337093422&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          loading="lazy"
+          allowFullScreen
+        ></iframe>
+      </div>
+      <div>
+        <h3 className="text-2xl font-semibold mb-4">Visit Us At</h3>
+        <p className="mb-4">Fototek Abbatoir, Plateau State, Nigeria</p>
+        <h3 className="text-2xl font-semibold mb-4">Contact Info</h3>
+        <p className="mb-2 flex items-center">
+          <Phone className="w-5 h-5 mr-2" /> +234 7076 2984 91
+        </p>
+        <p className="mb-2 flex items-center">
+          <Mail className="w-5 h-5 mr-2" /> joschristianrefuge24@gmail.com
+        </p>
+        <p className="mb-2 flex items-center">
+          <Clock className="w-5 h-5 mr-2" /> Sun - Sat: 9:00 AM - 6:00 PM
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
       {/* NEWSLETTER SECTION */}
       <section className="py-16 bg-white text-green-700">
         <div className="container mx-auto px-6 text-center">
