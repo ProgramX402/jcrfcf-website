@@ -186,7 +186,7 @@ export default function ContactPage() {
             {/* Replaced <i> tags with react-icons/fa components */}
             <div className="flex space-x-4 mt-6">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61555961339997"
                 className="text-green-700 text-2xl hover:text-green-900"
               >
                 <FaFacebook />
@@ -198,7 +198,7 @@ export default function ContactPage() {
                 <FaTwitter />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/jos_christian_refuge/"
                 className="text-green-700 text-2xl hover:text-green-900"
               >
                 <FaInstagram />
@@ -219,7 +219,7 @@ export default function ContactPage() {
   {/* The src has been updated to use the map centered at your coordinates. */}
   <iframe
     className="w-full h-full"
-    src="https://maps.app.goo.gl/ivcBoSdmpjwditJY6" 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.8005131593!2d8.871867177725388!3d9.896416835812095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105373985992274f%3A0xe0965beb1b5ec32e!2sPhototech%2FLenscope%20Media!5e0!3m2!1sen!2sng!4v1762456211048!5m2!1sen!2sng" 
     style={{ border: 0 }}
     allowFullScreen
     loading="lazy"

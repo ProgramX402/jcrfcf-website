@@ -15,28 +15,29 @@ export default function About() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative h-72 flex items-center justify-center bg-green-700 text-white overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/assets/images/about-hero-img.jpg"
-            alt="About Hero"
-            fill
-            sizes="100vw"
-            className="object-cover opacity-60"
-          />
-        </div>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative z-10 text-center px-6"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold">About Us</h1>
-          <p className="mt-3 text-lg">
-            Learn more about our journey, vision, and mission
-          </p>
-        </motion.div>
-      </section>
+      <section className="relative h-[40vh] md:h-[60vh] lg:h-96 flex items-center justify-center bg-green-700 text-white overflow-hidden mt-8 md:mt-18">
+    <div className="absolute inset-0">
+      {/* Assuming 'Image' is a Next.js Image component or similar */}
+      <Image
+        src="/about-hero.jpg"
+        alt="About Hero"
+        fill
+        sizes="100vw"
+        className="object-cover opacity-60"
+      />
+    </div>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="relative z-10 text-center px-6"
+    >
+      <h1 className="text-4xl md:text-6xl font-bold">About Us</h1>
+      <p className="mt-3 text-lg md:text-xl">
+        Learn more about our journey, vision, and mission
+      </p>
+    </motion.div>
+</section>
 
       {/* OUR HISTORY */}
       <section className="py-16 bg-white text-center">

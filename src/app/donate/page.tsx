@@ -9,8 +9,8 @@ const DonatePage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-green-700 text-white py-20 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold mb-4">
+      <section className="bg-green-700 text-white py-20 text-center mt-8 md:mt-18">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4 mt-15">
           Support Our Mission
         </h1>
         <p className="text-lg max-w-2xl mx-auto">
@@ -66,14 +66,14 @@ const DonatePage = () => {
           </p>
           <p className="mb-4">
             <i className="fas fa-map-marker-alt text-green-700 mr-2"></i>
-            123 Orphanage Street, City, Country
+            Fototek Abbattoir, Plateau, Nigeria.
           </p>
 
          {/* Google Map Embed */}
 <div className="rounded-lg overflow-hidden shadow-lg">
   <iframe
     // Updated to use the map link for the coordinates you provided (9.88224352, 8.88659012)
-    src="https://maps.app.goo.gl/ivcBoSdmpjwditJY6"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.8005131593!2d8.871867177725388!3d9.896416835812095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105373985992274f%3A0xe0965beb1b5ec32e!2sPhototech%2FLenscope%20Media!5e0!3m2!1sen!2sng!4v1762456211048!5m2!1sen!2sng"
     width="100%"
     height="400"
     style={{ border: 0 }}

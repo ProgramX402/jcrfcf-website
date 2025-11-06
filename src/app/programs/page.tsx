@@ -353,10 +353,10 @@ export default function Programs() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative h-72 flex items-center justify-center bg-green-700 text-white overflow-hidden">
+      <section className="relative mt-8 md:mt-18 h-72 flex items-center justify-center bg-green-700 text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/assets/images/hero.jpg"
+            src="/programs-hero.jpg"
             alt="Programs Hero"
             fill
             className="object-cover opacity-60"

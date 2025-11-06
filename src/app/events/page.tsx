@@ -36,8 +36,8 @@ export default async function EventsPage() {
 
       {/* HERO SECTION */}
       <section
-        className="relative w-full h-[60vh] bg-cover bg-center"
-        style={{ backgroundImage: "url('/assets/images/hero.jpg')" }}
+        className="relative w-full h-[60vh] bg-cover bg-center mt-8 md:mt-18"
+        style={{ backgroundImage: "url('/hero.jpg')" }}
       >
         <div className="absolute inset-0"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">

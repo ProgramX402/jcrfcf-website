@@ -26,7 +26,7 @@ const Page = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/assets/images/hero.jpg"
+        src="/hero.jpg"
         alt="Hero"
         fill
         className="absolute inset-0 w-full h-full object-cover"
@@ -144,7 +144,7 @@ const Page = () => {
       <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg">
   <iframe
     // Use the actual coordinates to generate the embed link
-    src="https://maps.app.goo.gl/ivcBoSdmpjwditJY6"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15721.8005131593!2d8.871867177725388!3d9.896416835812095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105373985992274f%3A0xe0965beb1b5ec32e!2sPhototech%2FLenscope%20Media!5e0!3m2!1sen!2sng!4v1762456211048!5m2!1sen!2sng"
     width="100%"
     height="100%"
     style={{ border: 0 }}

@@ -36,7 +36,7 @@ export default async function ProjectsPage() {
       {/* HERO SECTION */}
       <section
         className="relative w-full h-[70vh] bg-cover bg-center"
-        style={{ backgroundImage: "url('/assets/images/hero.jpg')" }}
+        style={{ backgroundImage: "url('project.jpg')" }}
       >
         <div className="absolute inset-0"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
