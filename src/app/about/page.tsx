@@ -236,8 +236,8 @@ export default function About() {
               { name: "Joshua Choji", role: "Admin Director", image: "/assets/images/josh.jpg" },
               { name: "Paul Zaruma", role: "Chairman", image: "/assets/images/paul.jpg" },
               { name: "Jerry Okar", role: "Member", image: "/assets/images/jerry.jpg" },
-              { name: "Justina", role: "Member", image: "/assets/images/justina.jpg" },
-              { name: "Oningbinde", role: "Member", image: "/assets/images/oni.jpg" },
+              { name: "Justina E. Nwokeocha", role: "Member", image: "/assets/images/justina.jpg" },
+              { name: "Jonathan Olusola Oningbinde", role: "Member", image: "/assets/images/oni.jpg" },
               { name: "Bill Murray", role: "Member", image: "/assets/images/billmurray.jpeg" },
             ].map((member, idx) => (
               <motion.div

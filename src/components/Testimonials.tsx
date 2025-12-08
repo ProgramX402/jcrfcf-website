@@ -4,86 +4,96 @@ import { useEffect } from "react";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import Swiper from "swiper";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
 
 export default function Testimonials() {
   useEffect(() => {
     new Swiper(".mySwiper", {
-      modules: [Pagination, Autoplay],
+      modules: [Pagination, Autoplay, Navigation],
       slidesPerView: 1,
       spaceBetween: 20,
       loop: true,
       autoplay: {
-        delay: 3500,
+        delay: 3000,
         disableOnInteraction: false,
       },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
       breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
+        768: { slidesPerView: 1 },
+        1024: { slidesPerView: 2 },
       },
     });
   }, []);
 
   const testimonials = [
     {
-      name: "Grace Johnson",
+      name: "Aaron Solomon",
+      role: "Graduate",
+      image: "/assets/images/download.jpeg",
+      quote:
+        "I am forever grateful to the dedicated team at JCRFC Orphanage Home for giving me a second chance at life. Growing up in the orphanage, I received not only a safe and loving shelter, but also exceptional educational support that has shaped me into the person I am today.",
+    },
+    {
+      name: "Enoch Tyulen",
       role: "Volunteer",
       image: "/assets/images/download.jpeg",
       quote:
-        "This foundation has completely changed my view on helping others. The dedication and love they show to the children is inspiring.",
+        "For the past 14 years of volunteering with JCRFCF, I have consistently seen God’s mighty hand at work—guiding, protecting, and delivering. JCRFCF truly serves as an incubation hub, molding and equipping the next generation of changemakers. I am grateful to be part of this transformative journey.",
     },
     {
-      name: "Samuel Adeyemi",
-      role: "Donor",
+      name: "Mary David",
+      role: "Ex-Student",
       image: "/assets/images/download.jpeg",
       quote:
-        "I’m glad to be a supporter. Every donation feels impactful, and the transparency of their work gives me peace of mind.",
+        "My testimonial TEM International Christian academy has transform me spiritually and academically.so I want to use this medium to appreciate all the staff for their love, care and encouragement.thank you.",
     },
     {
-      name: "Mariam Bello",
-      role: "Teacher",
+      name: "Philip Avia",
+      role: "Volunteer",
       image: "/assets/images/download.jpeg",
       quote:
-        "Teaching the children here has been one of the most rewarding experiences of my life. The environment is full of hope and love.",
+        "Volunteering with this organization has been seamless. Their mission is genuine and their results are visible in the community.",
     },
     {
-      name: "David Okoro",
-      role: "Partner",
+      name: "Nandang Maxwell",
+      role: "Volunteer",
       image: "/assets/images/download.jpeg",
       quote:
-        "Collaborating with this organization has been seamless. Their mission is genuine and their results are visible in the community.",
+        "Every time I volunteer, I feel part of something bigger. The joy on the kids’ faces makes it all worthwhile.",
+    },
+    {
+      name: "Fortress Michael",
+      role: "Volunteer & Ex-Student",
+      image: "/assets/images/download.jpeg",
+      quote:
+        "Their commitment to improving lives is truly remarkable. It’s heartwarming to see the positive impact they create.",
     },
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 relative">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-green-700">
           What People Say
         </h2>
 
         {/* Swiper Container */}
-        <div className="swiper mySwiper">
+        <div className="swiper mySwiper relative">
           <div className="swiper-wrapper">
             {testimonials.map((t, index) => (
               <div
                 key={index}
                 className="swiper-slide bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center justify-between"
               >
-                <div className="relative w-20 h-20 mb-4">
-                  <Image
-                    src={t.image}
-                    alt={t.name}
-                    className="rounded-full border-4 border-green-500 object-cover"
-                    fill
-                    sizes="80px"
-                  />
-                </div>
                 <p className="text-gray-600 italic mb-4">“{t.quote}”</p>
                 <div>
                   <h4 className="text-lg font-semibold text-green-700">{t.name}</h4>
@@ -95,6 +105,10 @@ export default function Testimonials() {
 
           {/* Pagination Dots */}
           <div className="swiper-pagination mt-6"></div>
+
+          {/* Navigation Arrows */}
+          <div className="swiper-button-prev text-green-700"></div>
+          <div className="swiper-button-next text-green-700"></div>
         </div>
       </div>
     </section>

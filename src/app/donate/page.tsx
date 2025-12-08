@@ -19,37 +19,71 @@ const DonatePage = () => {
         </p>
       </section>
 
-      {/* Bank Details Section */}
+      {/* Bank Details Section - UPDATED */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-10">Bank Details</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-10">
+            Our Bank Details (Zenith Bank)
+          </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 text-left">
-            <div className="p-6 bg-gray-50 shadow rounded-lg">
-              <i className="fas fa-university text-green-700 text-3xl mb-4"></i>
-              <h3 className="text-xl font-semibold mb-2">Main Account</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+            {/* Naira Account */}
+            <div className="p-6 bg-gray-50 shadow rounded-lg border-t-4 border-green-700">
+              <i className="fas fa-money-bill-wave text-green-700 text-3xl mb-4"></i>
+              <h3 className="text-xl font-semibold mb-2">Naira Account (NGN)</h3>
               <p>
-                <strong>Bank Name:</strong> Example Bank
+                <strong>Bank Name:</strong> Zenith Bank
               </p>
               <p>
-                <strong>Account Name:</strong> JCRFCF Orphanage
+                <strong>Account Name:</strong> Jos Christian Refuge for Children Foundation
               </p>
               <p>
-                <strong>Account Number:</strong> 1234567890
+                <strong>Account Number:</strong> 1310319381
               </p>
             </div>
 
-            <div className="p-6 bg-gray-50 shadow rounded-lg">
-              <i className="fas fa-piggy-bank text-green-700 text-3xl mb-4"></i>
-              <h3 className="text-xl font-semibold mb-2">Support Account</h3>
+            {/* GBP Account */}
+            <div className="p-6 bg-gray-50 shadow rounded-lg border-t-4 border-green-700">
+              <i className="fas fa-pound-sign text-green-700 text-3xl mb-4"></i>
+              <h3 className="text-xl font-semibold mb-2">Pounds Account (GBP)</h3>
               <p>
-                <strong>Bank Name:</strong> Another Bank
+                <strong>Bank Name:</strong> Zenith Bank
               </p>
               <p>
-                <strong>Account Name:</strong> JCRFCF Support Fund
+                <strong>Account Name:</strong> Jos Christian Refuge for Children Foundation
               </p>
               <p>
-                <strong>Account Number:</strong> 9876543210
+                <strong>Account Number:</strong> 5061413637
+              </p>
+            </div>
+
+            {/* USD Account */}
+            <div className="p-6 bg-gray-50 shadow rounded-lg border-t-4 border-green-700">
+              <i className="fas fa-dollar-sign text-green-700 text-3xl mb-4"></i>
+              <h3 className="text-xl font-semibold mb-2">Dollar Account (USD)</h3>
+              <p>
+                <strong>Bank Name:</strong> Zenith Bank
+              </p>
+              <p>
+                <strong>Account Name:</strong> Jos Christian Refuge for Children Foundation
+              </p>
+              <p>
+                <strong>Account Number:</strong> 5074542065
+              </p>
+            </div>
+
+            {/* EUR Account */}
+            <div className="p-6 bg-gray-50 shadow rounded-lg border-t-4 border-green-700">
+              <i className="fas fa-euro-sign text-green-700 text-3xl mb-4"></i>
+              <h3 className="text-xl font-semibold mb-2">Euro Account (EUR)</h3>
+              <p>
+                <strong>Bank Name:</strong> Zenith Bank
+              </p>
+              <p>
+                <strong>Account Name:</strong> Jos Christian Refuge for Children Foundation
+              </p>
+              <p>
+                <strong>Account Number:</strong> 5081135269
               </p>
             </div>
           </div>
