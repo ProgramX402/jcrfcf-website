@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { FaChild, FaHandsHelping, FaHome, FaLeaf, FaNetworkWired } from "react-icons/fa";
+
 
 export default function About() {
   const fadeUp = {
@@ -115,6 +117,75 @@ export default function About() {
           </p>
         </motion.div>
       </section>
+
+      {/* STRATEGIC AREAS */}
+<section className="py-16 bg-gray-100 text-center">
+  <motion.div
+    className="container mx-auto px-6 md:px-12 max-w-7xl"
+    variants={fadeUp}
+    initial="hidden"
+    whileInView="visible"
+    transition={{ duration: 0.8 }}
+    viewport={{ once: true }}
+  >
+    <h2 className="text-3xl md:text-4xl font-bold mb-12">
+      Our Strategic Areas
+    </h2>
+
+    {/* Cards Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+
+      {[
+        {
+          title: "Total Child Development",
+          desc: "Supporting emotional, educational, physical, spiritual, and social growth of every child.",
+          icon: <FaChild className="text-4xl text-green-700" />,
+        },
+        {
+          title: "Outreach & Rescue Services",
+          desc: "Identifying, rescuing, and supporting vulnerable children in crisis situations.",
+          icon: <FaHandsHelping className="text-4xl text-green-700" />,
+        },
+        {
+          title: "Alternative Care",
+          desc: "Providing safe housing, nurturing environments, and family-based care solutions.",
+          icon: <FaHome className="text-4xl text-green-700" />,
+        },
+        {
+          title: "Organization Development & Sustainability",
+          desc: "Building internal capacity, strengthening systems, and ensuring long-term growth.",
+          icon: <FaLeaf className="text-4xl text-green-700" />,
+        },
+        {
+          title: "Partnership & Networking",
+          desc: "Collaborating with individuals, communities, and institutions to expand impact.",
+          icon: <FaNetworkWired className="text-4xl text-green-700" />,
+        },
+      ].map((item, idx) => (
+        <motion.div
+          key={idx}
+          variants={fadeUp}
+          transition={{ duration: 0.6, delay: idx * 0.2 }}
+          className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
+        >
+          <div className="mb-4 flex justify-center">
+            {item.icon}
+          </div>
+
+          <h3 className="text-xl font-semibold mb-3 text-green-700">
+            {item.title}
+          </h3>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            {item.desc}
+          </p>
+        </motion.div>
+      ))}
+
+    </div>
+  </motion.div>
+</section>
+
 
       {/* VALUES */}
       <section className="py-16 bg-green-700 text-white text-center">
