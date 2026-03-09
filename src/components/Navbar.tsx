@@ -1,3 +1,4 @@
+
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -21,7 +22,7 @@ export default function Navbar() {
   return (
     <header className="bg-white shadow-md fixed top-0 w-full z-50">
       <nav className="container mx-auto flex justify-between items-center py-4 px-6">
-        {/* Logo */}
+        {/* Logo - Left */}
         <Link href="/" className="flex items-center space-x-2">
           <Image
             src="/assets/images/logo.jpeg"
@@ -33,35 +34,37 @@ export default function Navbar() {
           <span className="text-2xl font-bold text-green-700">JCRFCF</span>
         </Link>
 
-        {/* Desktop Menu */}
-        <ul className="hidden lg:flex gap-6 text-lg font-medium items-center">
-          {navLinks.map((link) => (
-            <li key={link.name}>
-              <Link
-                href={link.path}
-                className={`${
-                  pathname === link.path
-                    ? "text-green-700 font-semibold"
-                    : "hover:text-blue-600 transition"
-                }`}
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
-          <li>
-            <Link
-              href="/donate"
-              className={`px-4 py-2 rounded-lg transition ${
-                pathname === "/donate"
-                  ? "bg-green-700 text-white font-semibold"
-                  : "bg-green-700 text-white hover:bg-blue-700"
-              }`}
-            >
-              Donate
-            </Link>
-          </li>
-        </ul>
+        {/* Desktop Menu - Centered Links */}
+        <div className="hidden lg:flex flex-1 justify-center">
+          <ul className="flex gap-6 text-lg font-medium items-center">
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <Link
+                  href={link.path}
+                  className={`${
+                    pathname === link.path
+                      ? "text-green-700 font-semibold"
+                      : "hover:text-blue-600 transition"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Donate Button - Right */}
+        <Link
+          href="/donate"
+          className={`hidden lg:block px-4 py-2 rounded-lg transition ${
+            pathname === "/donate"
+              ? "bg-green-700 text-white font-semibold"
+              : "bg-green-700 text-white hover:bg-blue-700"
+          }`}
+        >
+          Donate
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
